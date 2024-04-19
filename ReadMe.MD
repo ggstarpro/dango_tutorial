@@ -1,9 +1,37 @@
 # 概要
 [Djangoクイックインストールガイドを実施した](https://docs.djangoproject.com/ja/3.2/intro/install/)
 
-## 仮想環境作成
+## pyenv(複数のPythonのバージョンを作成・管理)インストール
+```
+$ brew install pyenv
+$ pyenv -v
+pyenv 2.3.23
+
+# インストール可能なPythonのバージョン一覧を表示できます。
+pyenv install --list
+pyenv install 3.12.0b4
+
+# インストール済みのバージョンを確認する。
+pyenv versions
+
+# バージョンの切り替え
+pyenv global 3.12.0b4
+
+# インストール済みのバージョンを確認する。
+pyenv versions
+```
+
+## venv(仮想環境作成・管理)
+```
+# 仮想環境の作成(-mはモジュール名指定)
 $ python3 -m venv venv
+
+# 有効化
 $ source venv/bin/activate
+
+# 終了
+(.venv) $ deactivate
+```
 
 ## Djangoをインストール
 ```
